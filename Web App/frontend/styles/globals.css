@@ -1,0 +1,53 @@
+/* frontend/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* Custom styles based on branding direction */
+.bg-brand-dark {
+  background-color: #0f172a; /* dark 900 from tailwind config */
+}
+
+.bg-brand-light {
+  background-color: #ffffff;
+}
+
+.text-brand-primary {
+  color: #1d4ed8; /* primary 700 from tailwind config */
+}
+
+.text-brand-secondary {
+  color: #047857; /* secondary 700 from tailwind config */
+}
+
+.brand-btn {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded transition duration-300 ease-in-out;
+}
+
+.brand-btn-secondary {
+  @apply bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded transition duration-300 ease-in-out;
+}
